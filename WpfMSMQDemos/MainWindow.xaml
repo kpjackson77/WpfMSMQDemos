@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfMSMQDems.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMSMQDems"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="143*"/>
+            <ColumnDefinition Width="657*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel> <Button x:Name="CreateQueue" Content="Create Queue" Click="CreateQueue_Click" />
+            <Button x:Name="FindPrivate" Content="Find Private" Click="FindPrivate_Click"/>
+            <Button x:Name="SendMessage" Content="SendMessage" Click="SendMessage_Click"/>
+            <Button x:Name="SendBodyStream" Content="SendBodyStream" Click="SendBodyStream_Click"/>
+            <Button x:Name="ReceiveBodyStream" Content="ReceiveBodyStream" Click="ReceiveBodyStream_Click"/>
+            <Button x:Name="PeekFlightMessage" Content="PeekFlightMessage" Click="PeekFlightMessage_Click"/>
+            <Button x:Name="ReceiveFlightMessage" Content="ReceiveFlightMessage" Click="ReceiveFlightMessage_Click"/>
+            <Button x:Name="PeekAsynchronous" Content="PeekAsynchronous" Click="PeekAsynchronous_Click"/>
+            <Button x:Name="ReceiveAsynchronous" Content="ReceiveAsynchronous" Click="ReceiveAsynchronous_Click"/>
+            <Button x:Name="Enumerate" Content="Enumerate" Click="Enumerate_Click" />
+            <Button x:Name="EnumeratorRemove" Content="EnumerateRemove" Click="EnumeratorRemove_Click"/>
+            <Button x:Name="SendTransaction" Content="SendTransaction" Click="SendTransaction_Click"/>
+            <Button x:Name="ReceiveTransaction" Content="ReceiveTransaction" Click="ReceiveTransaction_Click"/>
+            <Button x:Name="ReceiveWithResponse" Content="ReceiveWithResponse" Click="ReceiveWithResponse_Click"/>
+        </StackPanel>
+        <ListBox x:Name="LBMessages" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+       
+    </Grid>
+</Window>
